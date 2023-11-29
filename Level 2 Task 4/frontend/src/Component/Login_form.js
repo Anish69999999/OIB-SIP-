@@ -18,10 +18,10 @@ const LoginForm = () => {
       console.log('Attempting to log in...');
       const response = await axios.post('http://localhost:3001/api/login', { username, password });
 
-      // Check if 'data' property exists before accessing it
+      
       if (response && response.data) {
         console.log('Login successful');
-        // You might want to store the token or perform other actions after successful login.
+      
         navigate('/secured-page'); // Navigate to the secured page
       } else {
         console.error('Response or data is undefined.');
